@@ -1,0 +1,11 @@
+.content {
+  width: 960px;
+  height: 520px;
+  overflow: hidden;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+.body {
+  cursor: none !important;
+}

@@ -1,0 +1,406 @@
+@keyframes slideInFromRightBig {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes revealFromTop {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes bloom {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bloom1 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 68px;
+    height: 68px;
+    opacity: 1;
+  }
+}
+@keyframes bloom2 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 54px;
+    height: 54px;
+    opacity: 1;
+  }
+}
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 6px;
+  }
+  100% {
+    opacity: 1;
+    height: 46px;
+  }
+}
+
+@keyframes sound2 {
+  0% {
+    opacity: 0.35;
+    height: 6px;
+  }
+  100% {
+    opacity: 1;
+    height: 60px;
+  }
+}
+@keyframes music_1 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes music_2 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes music_3 {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    right: -788px;
+    opacity: 0;
+  }
+  100% {
+    right: 172px;
+    opacity: 1;
+  }
+}
+@keyframes customAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 44px 38px;
+    width: fit-content;
+    height: fit-content;
+  }
+  .ten {
+    position: absolute;
+    top: 0;
+  }
+  .triangle {
+    position: absolute;
+    right: 0;
+    top: -6px;
+    animation: slideInFromRight 1s ease-in-out;
+    z-index: 2;
+  }
+  .line {
+    position: absolute;
+    right: 22px;
+    z-index: 3;
+    img {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      animation: revealFromTop 2s ease-in-out forwards;
+    }
+  }
+  .line2 {
+    position: absolute;
+    right: 40px;
+    z-index: 3;
+    top: -32px;
+    img {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      animation: revealFromTop 2s ease-in-out forwards;
+    }
+  }
+  .circle {
+    position: absolute;
+    top: 36px;
+    z-index: 3;
+    right: 58px;
+    animation: bloom 2s ease-in-out forwards;
+  }
+  .circle1 {
+    position: absolute;
+    top: 310px;
+    z-index: 3;
+    right: -34px;
+    animation: bloom1 2s ease-in-out forwards;
+  }
+  .circle2 {
+    position: absolute;
+    top: 480px;
+    z-index: 3;
+    right: 240px;
+    animation: bloom 2s ease-in-out forwards;
+  }
+  .circle3 {
+    position: absolute;
+    top: 126px;
+    z-index: 3;
+    left: 242px;
+    animation: bloom 2s ease-in-out forwards;
+  }
+  .square {
+    position: absolute;
+    top: 166px;
+    right: -788px;
+    z-index: 1;
+    width: 788px;
+    animation: slideInFromLeft 2s ease-in-out forwards 2s;
+    img {
+      width: 100%;
+    }
+  }
+  .circle_big {
+    position: absolute;
+    top: 172px;
+    right: 44px;
+    // right: -280px;
+    z-index: 4;
+    animation: slideInFromRightBig 2s ease-in-out forwards;
+    .pos {
+      position: relative;
+    }
+  }
+  .audio {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 60%;
+    height: 40px;
+    z-index: 4;
+  }
+  .videoRecorder {
+    width: 100%;
+  }
+}
+
+.head_phone {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  z-index: 4;
+}
+.square_mini_wrapper {
+  z-index: 5;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 82px;
+  right: 76px;
+  background: #fff;
+  display: flex;
+  gap: 8px;
+  .sound_wave {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sound_wave .bar {
+    display: block;
+    width: 2px;
+    margin-right: 1px;
+    height: 60px;
+    background: #7c93bf;
+    animation: sound2 0ms -800ms linear infinite alternate;
+    transition: height 0.8s;
+  }
+
+  .bar:nth-child(1) {
+    height: 2px;
+    animation-duration: 474ms;
+  }
+
+  .bar:nth-child(2) {
+    height: 10px;
+    animation-duration: 433ms;
+  }
+
+  .bar:nth-child(3) {
+    height: 18px;
+    animation-duration: 407ms;
+  }
+
+  .bar:nth-child(4) {
+    height: 26px;
+    animation-duration: 458ms;
+  }
+
+  .bar:nth-child(5) {
+    height: 30px;
+    animation-duration: 400ms;
+  }
+
+  .bar:nth-child(6) {
+    height: 32px;
+    animation-duration: 427ms;
+  }
+
+  .bar:nth-child(7) {
+    height: 34px;
+    animation-duration: 441ms;
+  }
+
+  .bar:nth-child(8) {
+    height: 36px;
+    animation-duration: 419ms;
+  }
+
+  .bar:nth-child(9) {
+    height: 40px;
+    animation-duration: 487ms;
+  }
+
+  .bar:nth-child(10) {
+    height: 46px;
+    animation-duration: 442ms;
+  }
+
+  .bar:nth-child(11) {
+    height: 2px;
+    animation-duration: 474ms;
+  }
+
+  .bar:nth-child(12) {
+    height: 10px;
+    animation-duration: 433ms;
+  }
+
+  .bar:nth-child(13) {
+    height: 18px;
+    animation-duration: 407ms;
+  }
+
+  .bar:nth-child(14) {
+    height: 26px;
+    animation-duration: 458ms;
+  }
+
+  .bar:nth-child(15) {
+    height: 30px;
+    animation-duration: 400ms;
+  }
+
+  .bar:nth-child(16) {
+    height: 32px;
+    animation-duration: 427ms;
+  }
+
+  .bar:nth-child(17) {
+    height: 34px;
+    animation-duration: 441ms;
+  }
+
+  .bar:nth-child(18) {
+    height: 36px;
+    animation-duration: 419ms;
+  }
+
+  .bar:nth-child(19) {
+    height: 40px;
+    animation-duration: 487ms;
+  }
+
+  .bar:nth-child(20) {
+    height: 46px;
+    animation-duration: 442ms;
+  }
+}
+.img {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
